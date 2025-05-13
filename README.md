@@ -49,6 +49,7 @@ This step includes blocking incoming traffic and allowing all outgoing traffic t
 
 
 *sudo ufw default deny incoming*
+
 *sudo ufw default allow outgoing*
 
 ![image](https://github.com/user-attachments/assets/32af60ea-a78b-4f2e-8fc6-e6a826dc5e20)
@@ -58,6 +59,7 @@ This step includes blocking incoming traffic and allowing all outgoing traffic t
 ### Step 6: 6.	Allow HTTP and HTTPS Traffic
 
 *sudo ufw allow http*
+
 *sudo ufw allow https*
 
 ![image](https://github.com/user-attachments/assets/f77707fc-9f2a-479e-9845-3bec0e6a441c)
