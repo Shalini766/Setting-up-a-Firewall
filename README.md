@@ -72,11 +72,82 @@ This step includes blocking incoming traffic and allowing all outgoing traffic t
 
 ![image](https://github.com/user-attachments/assets/1fa85fb6-78b6-4d1d-87ee-bb78388e1312)
 
+## Configuring Firewall Rules to Allow and Block Specific Traffic
+
+UFW allows you to add specific rules for blocking or allowing traffic based on ports, IP addresses, and protocols.
+
+### Allowing a Specific Port: 
+
+To allow a specific port (e.g., port 8080): *sudo ufw allow 8080*
+
+![image](https://github.com/user-attachments/assets/4d183479-8079-4593-a5af-3cebde3e24a6)
+
+To specify protocol: TCP or UDP, use: *sudo ufw allow 8080/tcp*
+
+![image](https://github.com/user-attachments/assets/c2282ab1-bbfa-4df5-8ccc-4353e6c27632)
+
+### Blocking a Specific Port: 
+
+To block a specific port (e.g., port 8080): *sudo ufw deny 8080*
+
+![image](https://github.com/user-attachments/assets/c3ea3d25-b37a-4945-88bb-f1590e94607e)
 
 
+### Allowing or Blocking Specific IP Addresses:
+
+To allow traffic from a specific IP address (e.g., 192.168.1.100): *sudo ufw allow from 192.168.1.100*
+
+![image](https://github.com/user-attachments/assets/be1846d6-ebf2-4bc5-8c95-baef0771879e)
 
 
+To block traffic from a specific IP address: *sudo ufw deny from 192.168.1.100*
 
+![image](https://github.com/user-attachments/assets/f51f852d-2512-4a65-bf71-1308dac0daa2)
+
+
+### Allowing or Blocking a Specific IP Address on a Specific Port: 
+
+For example, to allow IP 192.168.1.100 to access port 80: *sudo ufw allow from 192.168.1.100 to any port 80*
+
+To block the same IP from accessing port 80: *sudo ufw deny from 192.168.1.100 to any port 80*
+
+![image](https://github.com/user-attachments/assets/22cad3bd-4984-4070-9a6e-065e3be99ab4)
+
+### Allowing Specific IP Ranges:
+
+You can also allow or block IP address ranges: *sudo ufw allow from 192.168.1.0/24*
+
+![image](https://github.com/user-attachments/assets/ddedd76b-5c86-4780-b4dc-b1b0e5fa9faa)
+
+
+### Allowing or Blocking a Range of Ports: 
+
+For example, to allow ports 1000 to 2000: *sudo ufw allow 1000:2000/tcp*
+
+![image](https://github.com/user-attachments/assets/b9717451-31d4-4f08-a2a6-93a0e1bccb68)
+
+
+My firewall status after management
+
+![image](https://github.com/user-attachments/assets/2979360a-0a07-4da8-bab8-9abc5a8d219a)
+
+## Advanced Firewall Configuration with UFW
+
+
+**Logging**: UFW supports logging, which helps track firewall activity. 
+
+You can enable logging with: *sudo ufw logging on*
+
+![image](https://github.com/user-attachments/assets/14c65b2f-4322-4064-a236-354e4e49008c)
+
+ 
+By default, logs are saved to /var/log/ufw.log.
+
+**Rate Limiting**: Protect services from brute-force attacks by limiting the rate of incoming connections.
+
+For example, to limit SSH connections to 3 attempts per minute: *sudo ufw limit ssh*
+
+![image](https://github.com/user-attachments/assets/de1cdc0f-534b-4fe9-a886-cd99af51e164)
 
 
 
