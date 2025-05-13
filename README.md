@@ -14,8 +14,9 @@ From this project users can gain hands-on experience in securing a virtual machi
 ### Step 1: Installing UFW
 -Open the terminal and run the following command to install UFW
 
-    *sudo apt-get update*
-    *sudo apt-get install ufw*
+   *sudo apt-get update*
+   
+   *sudo apt-get install ufw*
 
 ![image](https://github.com/user-attachments/assets/e36b3c73-f240-4779-8643-2958fc7b7e1c)
 
